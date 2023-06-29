@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS to center the container div */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    /* CSS to adjust video width on different devices */
+    @media (max-width: 767px) {
+      #video-container {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #video-container {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <video controls>
+      <source src="../img/test1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>

@@ -44,22 +44,20 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var videoContainer = document.getElementById('video-container');
+    var video = document.getElementById('video');
 
-    // Play video in full screen when the page is loaded
-    videoContainer.addEventListener('click', function() {
-      if (videoContainer.requestFullscreen) {
-        videoContainer.requestFullscreen();
-      } else if (videoContainer.mozRequestFullScreen) {
-        videoContainer.mozRequestFullScreen();
-      } else if (videoContainer.webkitRequestFullscreen) {
-        videoContainer.webkitRequestFullscreen();
-      } else if (videoContainer.msRequestFullscreen) {
-        videoContainer.msRequestFullscreen();
-      }
-    });
+    // Enter fullscreen mode when the page is loaded
+    if (videoContainer.requestFullscreen) {
+      videoContainer.requestFullscreen();
+    } else if (videoContainer.mozRequestFullScreen) {
+      videoContainer.mozRequestFullScreen();
+    } else if (videoContainer.webkitRequestFullscreen) {
+      videoContainer.webkitRequestFullscreen();
+    } else if (videoContainer.msRequestFullscreen) {
+      videoContainer.msRequestFullscreen();
+    }
 
     // Close the webpage when the video is closed
-    var video = document.getElementById('video');
     video.addEventListener('ended', function() {
       if (document.exitFullscreen) {
         document.exitFullscreen();

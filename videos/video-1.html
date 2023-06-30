@@ -3,24 +3,17 @@
 <head>
   <style>
     /* CSS to center the container div */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
 
     .video-container {
       max-height: 80vh;
-      margin: 0 auto;
+      margin: 50px auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
     }
 
     .container {
       padding: 10px;
-      height: 100%;
     }
 
     @media only screen and (min-width: 600px) {
@@ -33,8 +26,8 @@
 <body>
 
 <div class="container">
-  <div class="video-container" id="video-container">
-    <video id="video" width="100%" autoplay>
+  <div class="video-container">
+    <video id="video" width="100%" controls>
       <source src="../img/bidi_flexionextension.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -43,23 +36,22 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var videoContainer = document.getElementById('video-container');
+    var video = document.getElementById('video');
 
     // Play video in full screen when the page is loaded
-    videoContainer.addEventListener('click', function() {
-      if (videoContainer.requestFullscreen) {
-        videoContainer.requestFullscreen();
-      } else if (videoContainer.mozRequestFullScreen) {
-        videoContainer.mozRequestFullScreen();
-      } else if (videoContainer.webkitRequestFullscreen) {
-        videoContainer.webkitRequestFullscreen();
-      } else if (videoContainer.msRequestFullscreen) {
-        videoContainer.msRequestFullscreen();
+    video.addEventListener('canplay', function() {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
       }
     });
 
     // Close the webpage when the video is closed
-    var video = document.getElementById('video');
     video.addEventListener('ended', function() {
       if (document.exitFullscreen) {
         document.exitFullscreen();

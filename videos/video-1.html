@@ -3,7 +3,6 @@
 <head>
   <style>
     /* CSS to center the container div */
-
     .video-container {
       max-height: 80vh;
       margin: 50px auto;
@@ -38,8 +37,8 @@
   document.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('video');
 
-    // Play video in full screen when the page is loaded
-    video.addEventListener('canplay', function() {
+
+    function enterFullscreen() {
       if (video.requestFullscreen) {
         video.requestFullscreen();
       } else if (video.mozRequestFullScreen) {
@@ -49,10 +48,10 @@
       } else if (video.msRequestFullscreen) {
         video.msRequestFullscreen();
       }
-    });
+    }
 
-    // Close the webpage when the video is closed
-    video.addEventListener('ended', function() {
+
+    function exitFullscreen() {
       if (document.exitFullscreen) {
         document.exitFullscreen();
       } else if (document.mozCancelFullScreen) {
@@ -62,7 +61,22 @@
       } else if (document.msExitFullscreen) {
         document.msExitFullscreen();
       }
-      window.close();
+    }
+
+
+    video.addEventListener('canplay', function() {
+      enterFullscreen();
+    });
+
+    document.addEventListener('fullscreenchange', function() {
+      if (!document.fullscreenElement) {
+        exitFullscreen();
+      }
+    });
+
+    document.addEventListener('click', function() {
+      enterFullscreen();
+      video.play();
     });
   });
 </script>

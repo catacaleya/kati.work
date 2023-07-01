@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS to center the container div */
+
+    .video-container {
+      max-height: 80vh;
+      margin: 50px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      padding: 10px;
+    }
+
+    @media only screen and (min-width: 600px) {
+      .video-container {
+        max-width: 80vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="video-container">
+    <video id="video" width="100%" controls>
+      <source src="../img/sync_unidi.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('video');
+
+    // Play video in full screen when the page is loaded
+    video.addEventListener('canplay', function() {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    });
+
+    // Close the webpage when the video is closed
+    video.addEventListener('ended', function() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+      window.close();
+    });
+  });
+</script>
+
+</body>
+</html>

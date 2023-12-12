@@ -44,44 +44,6 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
     }
-    /* Pop-up styling */
-    .popup-content {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;
-      padding: 20px;
-      background-color: #00FFFF; /* Change background color to cyan */
-      border: 2px solid #FF4500; /* Add border with color orange red */
-      box-shadow: 4px 4px 6px #000000; /* Add box shadow */
-      z-index: 9999;
-      text-align: center;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-size: 24px;
-      color: #FF00FF; /* Set font color to magenta */
-      text-transform: uppercase;
-      text-shadow: 2px 2px 4px #00FFFF; /* Add text shadow with cyan color */
-      animation: blink 1s linear infinite; /* Add blink animation */
-    }
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    .popup-img {
-      max-width: 100%;
-      height: auto;
-    }
-    .close-btn {
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #FF1493;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -98,30 +60,11 @@
     </div>
   </div>
 
-  <!-- Pop-up content -->
-  <div class="popup-content" id="popup">
-    <p style="color: #FF0000;">Herzlichen Glückwunsch!</p>
-    <p style="color: #00FF00;">Du hast</p>
-    <p style="color: #0000FF;">EINEN GRATIS SECHSERPACK</p>
-    <img class="popup-img" src="../img/afri.jpg" alt="Afri Cola">
-    <p>Genieße dein Getränk und habe einen fantastischen Tag!</p>
-    <button class="close-btn" onclick="closePopup()">Schließen</button>
-  </div>
-
-  <!-- JavaScript to play birthday sound and handle pop-up -->
+  <!-- JavaScript to play birthday sound -->
   <script>
     function playAudio() {
       var audio = new Audio('../img/party-horn.mp3');
       audio.play();
-      showPopup();
-    }
-
-    function showPopup() {
-      document.getElementById('popup').style.display = 'block';
-    }
-
-    function closePopup() {
-      document.getElementById('popup').style.display = 'none';
     }
   </script>
 

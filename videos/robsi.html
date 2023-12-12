@@ -80,8 +80,18 @@
       50% { transform: translateY(-20px); }
     }
     @keyframes flyIn {
-      0% { transform: translateX(-100%); opacity: 0; }
-      100% { transform: translateX(0); opacity: 1; }
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    /* Adjust the animation duration here */
+    #birthday-img {
+      animation: flyIn 2s ease-out forwards; /* Apply animation to the image */
     }
   </style>
 </head>

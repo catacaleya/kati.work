@@ -122,11 +122,11 @@
     }
 
     // Play birthday sound when the page loads
-    window.onload = function() {
+    document.addEventListener('DOMContentLoaded', function() {
       var audio = new Audio('../img/party-horn.mp3');
       audio.play();
       setTimeout(showPopup, 5000); // Adjust timing as needed
-    };
+    });
   </script>
 
 </body>

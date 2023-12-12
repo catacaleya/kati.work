@@ -10,7 +10,7 @@
       text-align: center;
     }
     h1 {
-      font-size: 48px; /* Increase font size */
+      font-size: 48px; /* Increase font size for Happy Birthday header */
       color: #FF1493; /* Set font color to deep pink */
       text-shadow: 2px 2px 4px #000000; /* Add text shadow */
     }
@@ -39,8 +39,8 @@
       transform: translate(-50%, -50%);
       width: 300px;
       padding: 20px;
-      background-color: #00FFFF; /* Set background color to cyan */
-      border: 2px solid #FF00FF; /* Add border with color magenta */
+      background-color: #00FFFF; /* Change background color to cyan */
+      border: 2px solid #FF4500; /* Add border with color orange red */
       box-shadow: 4px 4px 6px #000000; /* Add box shadow */
       z-index: 9999;
       /* WordArt style */
@@ -50,12 +50,24 @@
       color: #FF00FF; /* Set font color to magenta */
       text-transform: uppercase;
       text-shadow: 2px 2px 4px #00FFFF; /* Add text shadow with cyan color */
-      animation: blink-animation 1s infinite; /* Add animation */
+      animation: blink 1s linear infinite; /* Add blink animation */
     }
-    @keyframes blink-animation {
-      0% { color: #FF00FF; }
-      50% { color: #00FFFF; }
-      100% { color: #FF00FF; }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .popup-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .close-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #FF1493;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -75,34 +87,29 @@
   <!-- JavaScript to show the pop-up -->
   <div id="overlay"></div>
   <div id="popup">
-    <img src="../img/afri.jpg" alt="Afri Cola" width="150"> <!-- Afri Cola picture -->
     <p style="color: #FF0000;">Herzlichen Glückwunsch!</p>
-    <p style="color: #00FF00;">Du hast ein</p>
-    <p style="color: #0000FF;">KOSTENLOSES Sixpack</p>
-    <p style="color: #FF00FF;">von Afri Cola erhalten!</p>
-    <p>Genieße dein Geschenk und hab einen fantastischen Tag!</p>
-    <button onclick="closePopup()">Schließen</button> <!-- Close button -->
+    <p style="color: #00FF00;">Du hast</p>
+    <p style="color: #0000FF;">EINEN GRATIS SECHSERPACK</p>
+    <img class="popup-img" src="../img/afri.jpg" alt="Afri Cola">
+    <p>Genieße dein Getränk und habe einen fantastischen Tag!</p>
+    <button class="close-btn" onclick="closePopup()">Schließen</button>
   </div>
 
+  <!-- JavaScript to show the pop-up and play birthday sound -->
   <script>
-    // Function to show the pop-up
     function showPopup() {
       document.getElementById('overlay').style.display = 'block';
       document.getElementById('popup').style.display = 'block';
+      var audio = new Audio('../img/party-horn.mp3');
+      audio.play();
     }
 
-    // Function to close the pop-up
     function closePopup() {
       document.getElementById('overlay').style.display = 'none';
       document.getElementById('popup').style.display = 'none';
     }
 
-    // Call the function after a delay (e.g., 5 seconds) to simulate the pop-up
     setTimeout(showPopup, 5000); // Adjust timing as needed
-
-    // Retro birthday sound
-    var audio = new Audio('../img/party_horn.mp3');
-    audio.play();
   </script>
 
 </body>

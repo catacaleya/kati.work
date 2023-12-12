@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday!</title>
+  <title>Alles Gute zum Geburtstag!</title>
   <style>
     body {
       background-color: #FFD700; /* Set background color to gold */
@@ -10,7 +10,7 @@
       text-align: center;
     }
     h1 {
-      font-size: 36px;
+      font-size: 48px; /* Increase font size */
       color: #FF1493; /* Set font color to deep pink */
       text-shadow: 2px 2px 4px #000000; /* Add text shadow */
     }
@@ -39,8 +39,8 @@
       transform: translate(-50%, -50%);
       width: 300px;
       padding: 20px;
-      background-color: #FFFF00; /* Set background color to yellow */
-      border: 2px solid #FF4500; /* Add border with color orange red */
+      background-color: #00FFFF; /* Set background color to cyan */
+      border: 2px solid #FF00FF; /* Add border with color magenta */
       box-shadow: 4px 4px 6px #000000; /* Add box shadow */
       z-index: 9999;
       /* WordArt style */
@@ -50,30 +50,38 @@
       color: #FF00FF; /* Set font color to magenta */
       text-transform: uppercase;
       text-shadow: 2px 2px 4px #00FFFF; /* Add text shadow with cyan color */
+      animation: blink-animation 1s infinite; /* Add animation */
+    }
+    @keyframes blink-animation {
+      0% { color: #FF00FF; }
+      50% { color: #00FFFF; }
+      100% { color: #FF00FF; }
     }
   </style>
 </head>
 <body>
 
   <!-- Birthday message -->
-  <h1>Happy Birthday!</h1>
-  <img src="../img/robs.jpg" alt="Colleague" width="400">
+  <h1>Alles Gute zum Geburtstag!</h1>
+  <img src="../img/robs.jpg" alt="Kollege" width="400">
   <div class="retro-text">
-    <p>Happy Birthday, Robs Bobs!</p>
-    <p>Don't forget to enjoy your special day!</p>
+    <p>Herzlichen Glückwunsch, Robs Bobs!</p>
+    <p>Vergiss nicht, deinen besonderen Tag zu genießen!</p>
     <blockquote>"Jetzt sollte es funktionieren."</blockquote>
   </div>
 
-  <p>Here's a surprise for you!</p>
+  <p>Hier ist eine Überraschung für dich!</p>
 
   <!-- JavaScript to show the pop-up -->
   <div id="overlay"></div>
   <div id="popup">
-    <p style="color: #FF0000;">Congratulations!</p>
-    <p style="color: #00FF00;">You've got a</p>
-    <p style="color: #0000FF;">FREE sixpack</p>
-    <p style="color: #FFFF00;">of Afri Cola!</p>
-    <p>Enjoy your drink and have a fantastic day!</p>
+    <img src="afri.jpg" alt="Afri Cola" width="150"> <!-- Afri Cola picture -->
+    <p style="color: #FF0000;">Herzlichen Glückwunsch!</p>
+    <p style="color: #00FF00;">Du hast ein</p>
+    <p style="color: #0000FF;">KOSTENLOSES Sixpack</p>
+    <p style="color: #FF00FF;">von Afri Cola erhalten!</p>
+    <p>Genieße dein Geschenk und hab einen fantastischen Tag!</p>
+    <button onclick="closePopup()">Schließen</button> <!-- Close button -->
   </div>
 
   <script>
@@ -83,8 +91,18 @@
       document.getElementById('popup').style.display = 'block';
     }
 
+    // Function to close the pop-up
+    function closePopup() {
+      document.getElementById('overlay').style.display = 'none';
+      document.getElementById('popup').style.display = 'none';
+    }
+
     // Call the function after a delay (e.g., 5 seconds) to simulate the pop-up
     setTimeout(showPopup, 5000); // Adjust timing as needed
+
+    // Retro birthday sound
+    var audio = new Audio('retro_birthday_sound.mp3');
+    audio.play();
   </script>
 
 </body>

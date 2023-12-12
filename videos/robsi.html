@@ -10,9 +10,10 @@
       text-align: center;
     }
     h1 {
-      font-size: 48px; /* Increase font size for Happy Birthday header */
+      font-size: 72px; /* Increase font size for Happy Birthday header */
       color: #FF1493; /* Set font color to deep pink */
-      text-shadow: 2px 2px 4px #000000; /* Add text shadow */
+      text-shadow: 4px 4px 8px #000000; /* Add text shadow */
+      animation: bounce 2s infinite; /* Add bounce animation */
     }
     .retro-text {
       font-family: 'Comic Sans MS', cursive;
@@ -20,6 +21,7 @@
       color: #00CED1; /* Set font color to dark turquoise */
       text-transform: uppercase;
       text-decoration: underline;
+      animation: rotate 2s infinite; /* Add rotation animation */
     }
     #overlay {
       display: none;
@@ -69,13 +71,25 @@
       border: none;
       cursor: pointer;
     }
+    @keyframes rotate {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes flyIn {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
 
   <!-- Birthday message -->
   <h1>Alles Gute zum Geburtstag!</h1>
-  <img src="../img/robs.jpg" alt="Kollege" width="400">
+  <img id="birthday-img" src="../img/robs.jpg" alt="Kollege" width="400" style="animation: flyIn 1s ease-out forwards;"> <!-- Added animation for image -->
   <div class="retro-text">
     <p>Herzlichen Glückwunsch, Robs Bobs!</p>
     <p>Vergiss nicht, deinen besonderen Tag zu genießen!</p>
@@ -95,13 +109,11 @@
     <button class="close-btn" onclick="closePopup()">Schließen</button>
   </div>
 
-  <!-- JavaScript to show the pop-up and play birthday sound -->
+  <!-- JavaScript to show the pop-up -->
   <script>
     function showPopup() {
       document.getElementById('overlay').style.display = 'block';
       document.getElementById('popup').style.display = 'block';
-      var audio = new Audio('../img/party-horn.mp3');
-      audio.play();
     }
 
     function closePopup() {
@@ -109,7 +121,12 @@
       document.getElementById('popup').style.display = 'none';
     }
 
-    setTimeout(showPopup, 5000); // Adjust timing as needed
+    // Play birthday sound when the page loads
+    window.onload = function() {
+      var audio = new Audio('../img/party-horn.mp3');
+      audio.play();
+      setTimeout(showPopup, 5000); // Adjust timing as needed
+    };
   </script>
 
 </body>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background-color: #FFD700; /* Set background color to gold */
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 36px;
+      color: #FF1493; /* Set font color to deep pink */
+      text-shadow: 2px 2px 4px #000000; /* Add text shadow */
+    }
+    .retro-text {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 24px;
+      color: #00CED1; /* Set font color to dark turquoise */
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+      z-index: 9998;
+    }
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      padding: 20px;
+      background-color: #FFFF00; /* Set background color to yellow */
+      border: 2px solid #FF4500; /* Add border with color orange red */
+      box-shadow: 4px 4px 6px #000000; /* Add box shadow */
+      z-index: 9999;
+      /* WordArt style */
+      text-align: center;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 24px;
+      color: #FF00FF; /* Set font color to magenta */
+      text-transform: uppercase;
+      text-shadow: 2px 2px 4px #00FFFF; /* Add text shadow with cyan color */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Birthday message -->
+  <h1>Happy Birthday!</h1>
+  <img src="path/to/colleague-picture.jpg" alt="Colleague" width="400">
+  <div class="retro-text">
+    <p>Happy Birthday, [Colleague's Name]!</p>
+    <p>Don't forget to enjoy your special day!</p>
+    <blockquote>"Jetzt sollte es funktionieren."</blockquote>
+  </div>
+
+  <p>Here's a surprise for you!</p>
+
+  <!-- JavaScript to show the pop-up -->
+  <div id="overlay"></div>
+  <div id="popup">
+    <p style="color: #FF0000;">Congratulations!</p>
+    <p style="color: #00FF00;">You've got a</p>
+    <p style="color: #0000FF;">FREE sixpack</p>
+    <p style="color: #FFFF00;">of Afri Cola!</p>
+    <p>Enjoy your drink and have a fantastic day!</p>
+  </div>
+
+  <script>
+    // Function to show the pop-up
+    function showPopup() {
+      document.getElementById('overlay').style.display = 'block';
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    // Call the function after a delay (e.g., 5 seconds) to simulate the pop-up
+    setTimeout(showPopup, 5000); // Adjust timing as needed
+  </script>
+
+</body>
+</html>

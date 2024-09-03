@@ -1,10 +1,10 @@
-# "Starnight" One Page Website Template
+# "Yebo" One Page Website Template
 
-"Starnight" is a one page website template made by [Peter Finlan](http://peterfinlan.com/).
+"Yebo" is a one page website template made by [Peter Finlan](http://peterfinlan.com/).
 
-[Download](https://dribbble.com/shots/1592140-Freebie-Starnight-HTML5-CSS3-Website-Template)
+[Download](https://dribbble.com/shots/1539580-Freebie-Yebo-Flat-HTML5-CSS3-Template)
 
-[Demo](https://dribbble.com/shots/1592140-Freebie-Starnight-HTML5-CSS3-Website-Template)
+[Demo](https://dribbble.com/shots/1539580-Freebie-Yebo-Flat-HTML5-CSS3-Template)
 
 ## License
 
@@ -20,7 +20,7 @@ Before contributing, please see the Contributing Guide (Coming soon).
 
 ### Design
 
-Designed by [Blaz Robar](http://www.blazrobar.com/)
+Designed by [Yebo](https://dribbble.com/shots/1491069-Bicycle-Flat-Layout-PSD/)
 
 ### Bootstrap
 
@@ -49,6 +49,5 @@ Designed by [Blaz Robar](http://www.blazrobar.com/)
 ## Misc
 
 Follow Pete: [Twitter](https://twitter.com/peterfinlan), [Dribbble](http://www.dribbble.com/peterfinlan), [GitHub](https://github.com/peterfinlan)
-
 
 

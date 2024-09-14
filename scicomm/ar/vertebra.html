@@ -11,15 +11,16 @@
     
     <!-- Add your 3D model here -->
     <model-viewer 
-      src="vertebra_24.glb" 
-      alt="A 3D model" 
-      ar 
-      ar-modes="scene-viewer quick-look" 
-      camera-controls 
-      shadow-intensity="1" 
-      auto-rotate>
+    src="path-to-your-model.glb" 
+    alt="A 3D model" 
+    ar 
+    ar-modes="scene-viewer quick-look" 
+    camera-controls 
+    auto-rotate 
+    camera-orbit="0deg 75deg 1m"
+    interaction-prompt="none"
+    shadow-intensity="1">
     </model-viewer>
-
     <!-- Additional styling or content -->
   </body>
 </html>

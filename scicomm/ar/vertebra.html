@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Viewer with AR</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D Model Viewer</title>
+    <!-- Include stylesheets from your landing page -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css" type="text/css">
+    <link rel="stylesheet" href="../../css/queries.css" type="text/css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" type="text/css">
+    <style>
+      body {
+        font-family: 'Lato', sans-serif;
+        background-color: #f9f9f9; /* Replace this with your desired background color */
+        color: #333;
+      }
+      /* Ensure the model is sized properly */
+      .model-viewer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff;
+      }
+      model-viewer {
+        width: 80%; /* Adjust width as necessary */
+        height: 500px;
+        border: 1px solid #ddd;
+      }
+    </style>
   </head>
   <body>
-    <h1>Katis Wirbelkörper</h1>
-    
-    <!-- Add your 3D model here -->
-    <model-viewer 
-    src="path-to-your-model.glb" 
-    alt="A 3D model" 
-    ar 
-    ar-modes="scene-viewer quick-look" 
-    camera-controls 
-    auto-rotate 
-    camera-orbit="0deg 75deg 1m"
-    interaction-prompt="none"
-    shadow-intensity="1">
-    </model-viewer>
-    <!-- Additional styling or content -->
+    <section class="model-viewer-container">
+      <!-- Embed your 3D model viewer here -->
+      <model-viewer src="path-to-your-model.glb" alt="A 3D model" auto-rotate camera-controls ar>
+      </model-viewer>
+    </section>
+    <!-- Include necessary scripts from your site -->
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

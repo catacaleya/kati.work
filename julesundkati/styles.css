@@ -10,7 +10,7 @@ body {
 /* Container Custom Styles */
 .container-custom {
     width: 100vw;
-    height: 90vh; /* Adjusted to almost the full viewport height */
+    /*height: 90vh; /* Adjusted to almost the full viewport height */
     padding: 20px;
     padding-top: 60px;
     box-sizing: border-box;

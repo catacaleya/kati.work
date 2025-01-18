@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jules & Kati</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
+
+        /* Hover effect for images */
+        .mosaic-img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .mosaic-img:hover {
+            transform: scale(1.1);
+            filter: brightness(0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">J ♡ K</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Locations">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Zeitplan">Zeitplan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (with Image) -->
+    <section id="hero" class="fade-in">
+        <div class="row">
+            <div class="col-md-5 col-lg-5 col-sm-12 hero-img-container">
+                <img src="./img/hero.jpg" alt="Wedding Hero Image">
+            </div>
+
+            <div class="col-md-7 col-lg-7 col-sm-12 text-container-hero d-flex flex-column justify-content-center">
+                <img src="./img/segen_dolcevita_schriftzug.png" alt="Schritzug Bozen" class="img-lettering">
+                <h1 class="hero-text"><br> <br> <br> Wir Heiraten </h1>
+                <h4>
+                    Und freuen uns riesig, dass ihr uns in dieser spannenden Zeit begleitet. Ohne euch wäre es nur halb so schön! <br>
+                    Alles, was ihr noch wissen müsst, findet ihr auf dieser Seite. <br><br>
+                </h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations_bozen" class="container-custom fade-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>
+                        <br> <br> <br> Locations
+                    </h2>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h5>Kirchliche Trauung</h5>
+                    <p>Unsere kirchliche Trauung wird in der <a href="https://maps.app.goo.gl/riRdkCLLWm36XW1s9"> evangelischen Kirche</a> in Bozen stattfinden.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <h5>Feierlichkeiten</h5>
+                    <p>Für das Get-Together am Freitag und die Feier am Samstag sind wir auf dem <a href="https://maps.app.goo.gl/kNxSDJAhPugqgKhN9"> Schloss Wangen-Bellermont</a> bei Bozen.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img src="./img/ev_kirche.png" class="locations-img" alt="Kirche">
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="./img/wangen.png" class="locations-img" alt="Schloss">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zeitplan Section -->
+    <section id="zeitplan_bozen" class="container-custom fade-in">
+        <div class="row justify-content-center">
+            <h2>Zeitplan</h2>
+            <div class="container col-5 text-center">
+                <img src="./img/zeitplan_dolcevita.png" class="img-fluid" alt="Zeitplan Dolve Vita">
+            </div>
+            <p class="p col-lg-8 text-center">
+                - Freitag open Stage
+            </p>
+        </div>
+    </section>
+
+    <!-- Übernachten -->
+    <section id="details_bozen" class="container-custom fade-in">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Übernachten</h2>
+                <p class="p col-lg-8 text-center">
+                    In unserer Hochzeitslocation sind eine gemütliche Anzahl an Betten sowie Stellplätze für eure Campervans und Wohnmobile verfügbar. Wir tun unser Bestes, so viele von 
+                    euch wie möglich direkt vor Ort unterzubringen, aber der Platz ist limitiert, sodass einige von euch in Unterkünften in der Nähe übernachten müssen. Sagt uns gerne, 
+                    wie ihr am liebsten übernachten wollt, damit wir zusammen eine gute Lösung für alle finden können.
+                </p>
+                <p class="p col-8 text-center">
+                    Für diejenigen, die außerhalb der Location übernachten, haben wir historische Appartments in Bozen gefunden. Zusätzlich wird es einen Shuttle Service geben, um die 
+                    Dinge einfacher zu machen.
+                </p>
+                <p class="p col-8 text-center">
+                    Weil ihr extra für uns eine weite Reise auf euch nehmt, würden wir euch gerne auf die Übernachtungen von Freitag bis Sonntag einladen. <br><br>
+                </p>
+                <h5>Kinder und müde Erwachsene</h5>
+                <p class="p-text-black">
+                    Unabhängig davon haben wir in der Location einen kleinen gemütlichen Schlafbereich für Kinder und Erwachsene eingerichtet - damit alle Aufpassenden die Feier in Ruhe genießen können, 
+                    während die Kleinen in der Nähe schlafen. Außerdem dürft ihr gerne die Betten in den Zimmern im oberen Geschoss der Location zwischennutzen, solange deren Bewohner 
+                    noch am Feiern sind. <br><br>
+                </p>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>Übernachten im Campervan</h5>
+                    <p class="p-text-black">
+                        Es gibt unterschiedliche Stellplätze an der Location – manche besser befahrbar, weil geteert, und manche etwas schlechter, weil im Weinberg. Die nächsten 
+                        Plätze sind die Parkplätze der Location, direkt vor der Tür. Um unsere Location herum fällt die Landschaft steil ab, weswegen ihr am besten 1-2 Keile einpackt, 
+                        um in der Nacht gerade stehen zu können. Es wird ein Badezimmer in der Location geben, das ihr benutzen könnt.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Übernachten im Apartment in Bozen</h5>
+                    <p class="p-text-black">
+                        Wir haben eine Abmachung mit Stay Cooper getroffen, innerhalb der wir einige Zimmer im Laubenhaus für euch reservieren konnten. Es gibt viele 4er Appartments, einige 6er 
+                        und wenige 2er. Falls das für euch die beste Option ist, dürft ihr gerne schon bei Stay Cooper buchen. Dafür müsst ihr einfach nur den Code ... 
+                        Damit wir einen besseren Überblick haben sagt uns bitte Bescheid, wenn ihr bucht.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Übernachten in der Location</h5>
+                    <p class="p-text-black">
+                        Ihr habt euer eigenes Zimmer mit Bad direkt in der Location. Damit seid ihr immer direkt vor Ort und unterstützt uns seelisch und moralisch so gut ihr könnt 
+                        bei der Vorbereitung. Ihr seid okay mit lauter Musik im Raum unter euch, habt eine Schwäche für einen Ausblick in die grünen Hügel von Bozen und helft morgens 
+                        beim Aufräumen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bilder :) -->
+    <section id="mosaic" class="fade-in">
+        <div class="container text-center">
+            <h2> <br> Wir in Bildern </h2><br>
+        </div>
+        <div class="mosaic-grid">
+            <!-- Images -->
+            <div class="mosaic-item"><img src="./img/jk1.jpg" class="mosaic-img" alt="Image 1"></div>
+            <div class="mosaic-item"><img src="./img/jk2.jpg" class="mosaic-img" alt="Image 2"></div>
+            <div class="mosaic-item"><img src="./img/jk3.jpg" class="mosaic-img" alt="Image 3"></div>
+            <div class="mosaic-item"><img src="./img/jk4.jpg" class="mosaic-img" alt="Image 4"></div>
+            <div class="mosaic-item"><img src="./img/jk5.jpg" class="mosaic-img" alt="Image 5"></div>
+            <div class="mosaic-item"><img src="./img/jk6.jpg" class="mosaic-img" alt="Image 6"></div>
+            <div class="mosaic-item"><img src="./img/jk7.jpg" class="mosaic-img" alt="Image 7"></div>
+            <div class="mosaic-item"><img src="./img/jk8.jpg" class="mosaic-img" alt="Image 8"></div>
+            <div class="mosaic-item"><img src="./img/jk9.jpg" class="mosaic-img" alt="Image 9"></div>
+            <div class="mosaic-item"><img src="./img/jk10.jpg" class="mosaic-img" alt="Image 10"></div>
+            <div class="mosaic-item"><img src="./img/jk11.jpg" class="mosaic-img" alt="Image 11"></div>
+            <div class="mosaic-item"><img src="./img/jk12.jpg" class="mosaic-img" alt="Image 12"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Kati & Jules</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic JS for Fade-In Effect -->
+    <script>
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        fadeInElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

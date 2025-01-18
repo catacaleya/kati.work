@@ -5,12 +5,12 @@ body {
     font-family: 'Garamond', serif; /* Default font */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Container Custom Styles */
 .container-custom {
     width: 100vw;
-    /*height: 90vh; /* Adjusted to almost the full viewport height */
     padding: 20px;
     padding-top: 60px;
     box-sizing: border-box;
@@ -26,10 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Headings */
 h1 {
     font-family: 'Garamond', serif;
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;}
 h2 {
-    font-family: 'Julius Sans One',
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 2.5rem;
     color: #A8A697;}
 h3 {
@@ -41,7 +41,7 @@ h4 {
     font-size: 1.75rem;
     color: #A8A697;}
 h5 {
-    font-family: 'Julius Sans One',
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 1.5rem;
     color: black;
     text-align: center;}
@@ -50,8 +50,8 @@ h6 {
     font-size: 1.1rem;
     color: #A8A697;
     margin-bottom: 20px;
-    text-align: center; /* Aligns all h6 text to the right */
-    }
+    text-align: center;
+}
 
 /* Normal Text */
 p {
@@ -87,15 +87,16 @@ button:hover, .btn:hover {
     background-color: #B37558;
 }
 
-/* globale Link Farben*/
+/* Global Link Colors */
 a {
-    color: #D6926B; /* Standard-Link-Farbe */
-    text-decoration: underline;}
+    color: #D6926B;
+    text-decoration: underline;
+}
 
 a:hover {
-    color: rgb(143, 86, 1); /* Farbe beim Hover */
-    text-decoration: underline;}
-
+    color: rgb(143, 86, 1);
+    text-decoration: underline;
+}
 
 /* Hero Section */
 #hero {
@@ -112,28 +113,32 @@ a:hover {
 .hero-img-container {
     padding: 0;
     height: 100%;
-    position: relative;}
+    position: relative;
+}
 
 .hero-img-container img {
     object-fit: cover;
     width: 100%;
-    height: 100%;}
+    height: 100%;
+}
 
 /* Right Side Text Container */
 .text-container-hero {
-    background-color: #F4F3E1; /* Background color to match container */
+    background-color: #F4F3E1;
     color: black;
     padding: 20px;
-    padding-bottom: 0px;}
+    padding-bottom: 0px;
+}
 
 /* Hero Text Styling */
 .hero-text {
-    font-family: 'Julius Sans One',
-    font-size: 6rem;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 4rem;
     font-weight: bold;
     color: black;
     line-height: 1.2;
     margin: 0;
+    text-align: center;
 }
 
 /* For Smaller Screens - Adjust font size */
@@ -147,56 +152,78 @@ a:hover {
     padding: 30px;
 }
 
-.hr_line{
-    border: 1px solid #D6926B; 
-    width: 80%; 
-    margin: 20px auto;"
+.hr_line {
+    border: 1px solid #D6926B;
+    width: 80%;
+    margin: 20px auto;
 }
 
 .locations-img {
-    width: 100%; /* Passt die Bilder an die Breite des Containers an */
-    max-width: 400px; /* Maximale Breite für Einheitlichkeit */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-    margin-bottom: 20px; /* Abstand zum Container unten */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
-    display: block; /* Zentriert das Bild, wenn `margin` verwendet wird */
+    display: block;
 }
 
+/* Scroll Effect */
+.scroll-reveal {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
 
+.scroll-reveal.visible {
+    opacity: 1;
+}
+
+/* Mosaic Section */
 #mosaic {
-    padding: 0; /* Ensure no padding on the outer container */
-    margin: 0; /* Ensure no margin */
-    width: 100%; /* Ensure full width */
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .mosaic-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 equal-width columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    gap: 0; /* Remove any gap between images */
-    width: 100%; /* Ensure the grid takes full width of the parent */
-    margin: 0; /* Remove margin */
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0;
+    width: 100%;
+    margin: 0;
 }
 
 .mosaic-item {
-    margin: 0; /* Remove margin around each item */
-    height: 200px; /* Fixed height for each image */
-    overflow: hidden; /* Hide any overflowed parts of the images */
+    margin: 0;
+    height: 200px;
+    overflow: hidden;
 }
 
 .mosaic-img {
-    width: 100%; /* Ensure the images fill the column */
-    height: 100%; /* Set the height to match the container */
-    object-fit: cover; /* Ensure the image covers the area, cropping if necessary */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
 }
 
-/* Hover effect: zoom in */
 .mosaic-img:hover {
     transform: scale(1.1);
     filter: brightness(90%);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    .mosaic-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .mosaic-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Modal for clicked images */
@@ -220,11 +247,6 @@ a:hover {
 .modal.show {
     display: flex;
 }
-
-
-
-
-
 
 /* Hover Details Box */
 .hover-trigger {
@@ -254,7 +276,17 @@ a:hover {
 .img-fluid {
     padding: 40px;
     height: 100%;
-    position: relative;}
+    position: relative;
+}
+
+.img-lettering {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 40px;
+    display: block;
+    max-height: 100%;
+}
 
 /* Lines and Borders (using #D6926B) */
 hr {

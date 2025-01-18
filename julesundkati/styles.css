@@ -288,6 +288,16 @@ a:hover {
     max-height: 100%;
 }
 
+.img-logo {
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+    padding: 40px;
+    display: block;
+    max-height: 100%;
+    text-align: center;
+}
+
 /* Lines and Borders (using #D6926B) */
 hr {
     border: 1px solid #D6926B;

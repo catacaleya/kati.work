@@ -54,6 +54,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Zeitplan">Zeitplan</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#details_bozen">Übernachten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback">Kommt ihr?</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,16 +75,21 @@
             <div class="col-md-7 col-lg-7 col-sm-12 text-container-hero d-flex flex-column justify-content-center">
                 <img src="./img/segen_dolcevita_schriftzug.png" alt="Schritzug Bozen" class="img-lettering">
                 <h1 class="hero-text"><br> <br> <br> Wir Heiraten </h1>
-                <h4>
+
+                <img src="./img/cypressen.png" alt="Cypressen" class="img-logo">
+
+                <p class="text-center">
                     Und freuen uns riesig, dass ihr uns in dieser spannenden Zeit begleitet. Ohne euch wäre es nur halb so schön! <br>
                     Alles, was ihr noch wissen müsst, findet ihr auf dieser Seite. <br><br>
-                </h4>
+                </p>
+
+                
             </div>
         </div>
     </section>
 
     <!-- Locations Section -->
-    <section id="locations_bozen" class="container-custom fade-in">
+    <section id="Locations" class="container-custom fade-in">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -89,28 +100,25 @@
                 <div class="col-lg-6 text-center">
                     <h5>Kirchliche Trauung</h5>
                     <p>Unsere kirchliche Trauung wird in der <a href="https://maps.app.goo.gl/riRdkCLLWm36XW1s9"> evangelischen Kirche</a> in Bozen stattfinden.</p>
+                    <!-- Image directly under text -->
+                    <img src="./img/ev_kirche.png" class="locations-img" alt="Kirche">
                 </div>
                 <div class="col-lg-6 text-center">
                     <h5>Feierlichkeiten</h5>
                     <p>Für das Get-Together am Freitag und die Feier am Samstag sind wir auf dem <a href="https://maps.app.goo.gl/kNxSDJAhPugqgKhN9"> Schloss Wangen-Bellermont</a> bei Bozen.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 text-center">
-                    <img src="./img/ev_kirche.png" class="locations-img" alt="Kirche">
-                </div>
-                <div class="col-lg-6 text-center">
+                    <!-- Image directly under text -->
                     <img src="./img/wangen.png" class="locations-img" alt="Schloss">
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Zeitplan Section -->
-    <section id="zeitplan_bozen" class="container-custom fade-in">
+    <section id="Zeitplan" class="container-custom fade-in">
         <div class="row justify-content-center">
             <h2>Zeitplan</h2>
-            <div class="container col-5 text-center">
+            <div class="container col-lg-5 col-sm-10 text-center">
                 <img src="./img/zeitplan_dolcevita.png" class="img-fluid" alt="Zeitplan Dolve Vita">
             </div>
             <p class="p col-lg-8 text-center">
@@ -194,6 +202,20 @@
             <div class="mosaic-item"><img src="./img/jk12.jpg" class="mosaic-img" alt="Image 12"></div>
         </div>
         </div>
+        <p class="text-center">
+            Übrigens findet ihr die Fotos von unserer Hochzeit im Nachhinein auch hier auf der Website!
+        </p>
+    </section>
+
+    <section id="Feedback" class="container-custom fade-in">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Sagt uns Bescheid</h2>
+                <p class="p col-lg-8 text-center">
+                    Sagt uns bitte bis zum 15.02. Bescheid, ob und wenn ja, mit wie vielen Leuten ihr kommt.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -215,7 +237,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1 }); // x% of the element must be visible for the event to trigger
 
         fadeInElements.forEach(el => observer.observe(el));
     </script>

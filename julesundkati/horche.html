@@ -54,6 +54,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Zeitplan">Zeitplan</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#uebernachten">Übernachten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback">Kommt ihr?</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -69,10 +75,15 @@
             <div class="col-md-7 col-lg-7 col-sm-12 text-container-hero d-flex flex-column justify-content-center">
                 <img src="./img/heirat_hoffest_schriftzug.png" alt="Schritzug Horche" class="img-lettering">
                 <h1 class="hero-text"><br> <br> <br> Wir Heiraten </h1>
-                <h4>
+
+                <p class="text-center">
                     Und freuen uns riesig, dass ihr uns in dieser spannenden Zeit begleitet. Ohne euch wäre es nur halb so schön! <br>
                     Alles, was ihr noch wissen müsst, findet ihr auf dieser Seite. <br><br>
-                </h4>
+                </p>
+
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>
@@ -110,7 +121,7 @@
     <section id="zeitplan_horche" class="container-custom fade-in">
         <div class="row justify-content-center">
             <h2>Zeitplan</h2>
-            <div class="container col-5 text-center">
+            <div class="container col-lg-5 col-sm-10 text-center">
                 <img src="./img/zeitplan_horche.png" class="img-fluid" alt="Zeitplan Horche">
             </div>
             <p class="p col-lg-8 text-center">
@@ -121,7 +132,7 @@
     </section>
 
     <!-- Übernachten -->
-    <section id="details" class="container-custom fade-in">
+    <section id="uebernachten" class="container-custom fade-in">
         <div class="container">
             <div class="row justify-content-center">
                 <h2>Übernachten</h2>
@@ -161,6 +172,17 @@
         </div>
     </section>
 
+    <section id="Feedback" class="container-custom fade-in">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2>Sagt uns Bescheid</h2>
+                <p class="p col-lg-8 text-center">
+                    Sagt uns bitte bis zum 15.02. Bescheid, ob und wenn ja, mit wie vielen Leuten ihr kommt.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <p>&copy; 2025 Kati & Jules</p>
@@ -180,7 +202,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1 }); // x% of the element must be visible for the event to trigger
 
         fadeInElements.forEach(el => observer.observe(el));
     </script>

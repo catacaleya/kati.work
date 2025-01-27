@@ -133,8 +133,9 @@
                 <img src="./img/zeitplan_horche.png" class="img-fluid" alt="Zeitplan Horche">
             </div>
             <p class="p col-lg-8 text-center">
-                Gestaltet die Zeit zwischen der Trauung und dem Beginn des Hoffests um 16:00 Uhr gerne frei. Wir selbst werden nach dem Sektempfang einen guten Kaffee in Marburg bei der Rösterei „Die Bohne“ trinken gehen. 
-                (Lisa hat angeboten, eine kleine Stadtführung zu machen für alle, die daran Interesse haben.)
+                Gestaltet die Zeit zwischen der Trauung und dem Beginn des Hoffests um 16:00 Uhr gerne frei. 
+                Wir selbst werden nach dem Sektempfang am Seepark in Niederweimar einen Kaffee
+                trinken gehen.
                 <br>
                 Ihr wollt schon früher kommen? 
                 <br>
@@ -217,7 +218,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 }); // x% of the element must be visible for the event to trigger
+        }, { threshold: 0.05 }); // x% of the element must be visible for the event to trigger
 
         fadeInElements.forEach(el => observer.observe(el));
     </script>

@@ -112,6 +112,9 @@ a:hover {
 /* Hero Section Image */
 .hero-img-container {
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -150,6 +153,11 @@ a:hover {
 .lettering {
     padding: 30px;
 }
+
+#Locations {
+    margin-top: 2rem; /* Adds space between hero and locations */
+}
+
 
 .hr_line {
     border: 1px solid #D6926B;

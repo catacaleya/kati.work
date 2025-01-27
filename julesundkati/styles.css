@@ -62,6 +62,20 @@ p {
     margin-bottom: 15px;
 }
 
+.p-text-small {
+    color: black;
+    font-family: 'Garamond', serif;
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .p-text-small {
+        font-size: 0.8rem;
+    }
+}
 
 /* Buttons and Links */
 button, .btn {
@@ -154,7 +168,15 @@ a:hover {
 }
 
 #Locations {
-    margin-top: 2rem; /* Adds space between hero and locations */
+    margin-top: 10rem; /* Adds space between hero and locations */
+}
+
+#Zeitplan {
+    margin-top: 5rem;
+}
+
+#details_bozen {
+    margin-top: 10rem;
 }
 
 

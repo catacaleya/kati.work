@@ -62,13 +62,6 @@ p {
     margin-bottom: 15px;
 }
 
-.p-text-black {
-    color: black;
-    font-family: 'Garamond', serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
 
 /* Buttons and Links */
 button, .btn {
@@ -289,6 +282,13 @@ a:hover {
 .img-fluid {
     padding: 40px;
     height: 100%;
+    position: relative;
+}
+
+.img-fluid-zeitplan {
+    padding: 0px;
+    height: auto;
+    width: 100%;
     position: relative;
 }
 

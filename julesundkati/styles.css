@@ -125,6 +125,12 @@ a:hover {
     height: 100vh;
 }
 
+@media (max-width: 576px) {
+    .hero-img-container {
+        height: 93vh;
+    }
+}
+
 .hero-img-container img {
     object-fit: cover;
     width: 100%;
@@ -326,11 +332,13 @@ a:hover {
 .img-logo {
     width: 20%;
     height: auto;
+    margin-top: auto;
     object-fit: contain;
     padding: 40px;
     display: block;
     max-height: 100%;
-    text-align: bottom;
+    text-align: center;
+
 }
 
 /* Lines and Borders (using #D6926B) */

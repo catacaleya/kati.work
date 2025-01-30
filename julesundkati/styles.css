@@ -374,3 +374,9 @@ hr {
         font-size: 1rem;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: light;
+    }
+}
